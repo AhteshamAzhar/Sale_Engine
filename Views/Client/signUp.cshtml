@@ -1,0 +1,31 @@
+﻿@model EAD_Term_Project.Models.Client
+
+
+@{
+    Layout = "~/Views/Shared/viewStart.cshtml";       
+}
+
+<div class="container">
+    <h2>Sign Up</h2>
+
+    <form id="clientLogin" method="post" action="/Client/signupReg">
+        <table>
+            <tr>
+                <td><label>Name:</label></td>
+                <td>@Html.TextBoxFor(x => x.Name, new { placeholder = "UserName" })</td>
+                <td>@ViewBag.exist</td>
+            </tr>
+            <tr>
+                <td><label>E-mail: </label></td>
+                <td>@Html.TextBoxFor(x => x.Email, new { placeholder = "Email" }) <br /></td>
+            </tr>
+            <tr>
+                    <td><label>Password: </label></td>
+                    <td>@Html.PasswordFor(x => x.Password, new { placeholder = "Password" }) <br /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="align-content:center"><input type="submit" value="Sign Up" name="signup" /></td>
+            </tr>
+        </table>
+    </form>
+</div>

@@ -1,0 +1,52 @@
+﻿@model List<EAD_Term_Project.Models.Item>
+
+@{
+    if(@ViewBag.login == "true")
+    {
+        Layout = "~/Views/Shared/viewStart1.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/viewStart.cshtml";
+    }
+}
+
+<div class="container">
+    <h2>Clothes</h2>
+
+    <div class="row">
+
+         @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <center>
+                        <div>
+                            <a href="Client/Sale/@item.Id">
+                                <img class="grid" src="~/@item.PicPath" /></a>
+                        </div>
+                        <p>Rs. @item.Price</p>
+                    </center>
+                </div>
+            }
+
+        <!--<div class="col-md-4">
+            <img class="grid" src="~/Images/Clothes/clothes (1).jpg" /><p>PKR 2000</p>
+        </div>
+        <div class="col-md-4">
+            <img class="grid" src="~/Images/Clothes/clothes (2).jpg" /></div>
+        <div class="col-md-4">
+            <img class="grid" src="~/Images/Clothes/clothes (3).jpg" /></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-4">
+            <img class="grid" src="~/Images/Clothes/clothes (4).jpg" /></div>
+        <div class="col-sm-4">
+            <img class="grid" src="~/Images/Clothes/clothes (5).jpg" /></div>
+        <div class="col-sm-4">
+            <img class="grid" src="~/Images/Clothes/clothes (6).jpg" /></div>-->
+
+    </div>
+</div>

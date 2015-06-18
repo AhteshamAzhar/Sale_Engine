@@ -1,0 +1,23 @@
+﻿@{
+    if(@ViewBag.login == "true")
+    {
+        Layout = "~/Views/Shared/viewStart1.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/viewStart.cshtml";
+    }
+}
+
+
+<div class="container">
+    <h2>Sale</h2>
+
+    <img src=@ViewBag.item.PicPath /><br />
+    Id: @ViewBag.item.Id <br />
+    Description: @ViewBag.item.Description <br />
+    Catagory: @ViewBag.item.Category <br />
+    Type: @ViewBag.item.Type<br />
+    Price: Rs.@ViewBag.item.Price <br />
+</div>
+

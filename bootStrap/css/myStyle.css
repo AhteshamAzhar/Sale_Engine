@@ -1,0 +1,23 @@
+﻿body {
+}
+
+h2 {
+    background-color: aliceblue;
+    border: 2px solid;
+}
+
+.divv > *
+{
+    float: left;
+}
+
+.grid {
+    height: 200px;
+    width: 180px;
+}
+
+#clientLogin {
+    position: absolute;
+    border: 1px solid;
+    background-color: antiquewhite;
+}

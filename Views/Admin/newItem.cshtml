@@ -1,0 +1,49 @@
+﻿@model EAD_Term_Project.Models.Item
+
+@{
+    Layout = "~/Views/Shared/adminShared.cshtml";
+}
+
+<h2>Add New Item</h2>
+
+<div>
+    <form id="newItem" method="post" enctype="multipart/form-data" action="/Admin/addNew">
+        <table>
+            <tr>
+                <td>Category: </td>
+                <td><!--<select name="category">
+                        <option>Watch</option>
+                        <option>Clothes</option>
+                    </select>-->
+
+                    @Html.TextBoxFor(x => x.Category, new { placeholder = "Category" })
+
+                </td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>@Html.TextBoxFor(x => x.Description, new { placeholder = "Description" })</td>
+            </tr>
+            <tr>
+                <td>Price: </td>
+                <td>@Html.TextBoxFor(x => x.Price, new { placeholder = "Price" })</td>
+            </tr>
+            <tr>
+                <td>Quantity: </td>
+                <td>@Html.TextBoxFor(x => x.Quantity, new { placeholder = "Quantity" })</td>
+            </tr>
+            <tr>
+                <td>Type:</td>
+                <td>@Html.TextBoxFor(x => x.Type, new { placeholder = "Type" })</td>
+            </tr>
+            <tr>
+                <td>Picture:</td>
+                <td>@Html.TextBoxFor(x => x.PicName, new { placeholder = "Pic Name" })</td>
+                <td><input type="file" name="file" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Add" name="addItem" /></td>
+            </tr>
+        </table>
+    </form>
+</div>

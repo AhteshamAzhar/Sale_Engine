@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+    
+        <script src="~/bootStrap/js/bootstrap.min.js"></script>
+        <title>@ViewBag.title</title>
+    
+        <link href="~/bootStrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="~/bootStrap/css/myStyle.css" rel="stylesheet" />
+
+        <script src="/bootStrap/js/jquery.min.js"></script>
+        <script src="/bootStrap/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+         <!--<h1>A.A E-Shopping</h1>-->
+
+	    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href=@ViewBag.home>AA E-Shopping</a>
+                </div>
+            <div>
+      
+                <ul class="nav navbar-nav">
+                    <li class=@ViewBag.acHome ><a href=@ViewBag.home>Home</a></li>
+                    <!--<li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+                        <span class="caret"></span></a>
+                             <ul class="dropdown-menu">
+                                <li><a href="#">Page 1-1</a></li>
+                                <li><a href="#">Page 1-2</a></li>
+                                <li><a href="#">Page 1-3</a></li> 
+                             </ul>
+                        </li>-->
+                    <li class="Active"><a href=@ViewBag.watches>Watches</a></li> 
+                    <li class=@ViewBag.acClothing><a href=@ViewBag.clothing>Clothing</a></li>
+                    <li class=@ViewBag.acAbout><a href=@ViewBag.about>About</a></li>
+                    <li class=@ViewBag.acContact><a href=@ViewBag.contact>Contact Us</a></li>
+                    <li class=@ViewBag.acAdmin><a href=@ViewBag.admin>Admin</a></li>
+                </ul>
+
+                <ul class=" nav nav-tabs navbar-right">
+                        <li style="color:white">@Session["user"]</li>
+                        <li> <form id="clientLogin" method="post" action="/Client/signout">
+                            <input type="submit" style="color:white; background-color:grey" value="Sign Out"/>
+                            </form>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+        @RenderBody();
+
+    </body>
+
+</html>
