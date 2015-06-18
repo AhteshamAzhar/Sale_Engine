@@ -1,7 +1,7 @@
 ﻿@model List<EAD_Term_Project.Models.Item>
 
 @{
-    if(@ViewBag.login == "true")
+    if(@Session["user"] != null)
     {
         Layout = "~/Views/Shared/viewStart1.cshtml";
     }

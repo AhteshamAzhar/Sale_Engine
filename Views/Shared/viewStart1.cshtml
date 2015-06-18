@@ -48,10 +48,18 @@
                     <li class=@ViewBag.acAdmin><a href=@ViewBag.admin>Admin</a></li>
                 </ul>
 
+                <ul class="navbar-right">
+                    <li> <form id="clientLogin" method="post" action="/Client/signout">
+                            <input type="submit" value="Sign Out" name="signout" style="background="grey"/>
+                            <!--style="color:white; background-color:grey"-->
+                            </form>
+                        </li>
+                </ul>
                 <ul class=" nav nav-tabs navbar-right">
                         <li style="color:white">@Session["user"]</li>
-                        <li> <form id="clientLogin" method="post" action="/Client/signout">
-                            <input type="submit" style="color:white; background-color:grey" value="Sign Out"/>
+                    <li> <form id="clientLogin" method="post" action="/Client/signout">
+                            <input type="submit" value="Sign Out" name="signout" style="background="grey"/>
+                            <!--style="color:white; background-color:grey"-->
                             </form>
                         </li>
                     </ul>
